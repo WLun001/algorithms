@@ -2,6 +2,7 @@ package test
 
 import ArrayAndStrings.moveZeroes
 import ArrayAndStrings.plusOne
+import ArrayAndStrings.reverseString
 import ArrayAndStrings.twoSum
 import main.ArrayAndStrings.*
 import org.junit.jupiter.api.Test
@@ -74,6 +75,12 @@ class TestArrayAndString {
         val arr = intArrayOf(2, 7, 11, 15)
         assertTrue(Arrays.equals(intArrayOf(0, 1), twoSum(arr, 9)))
         assertTrue(Arrays.equals(intArrayOf(1, 3), twoSum(arr, 22)))
+    }
+
+    @Test
+    fun testReverseString() {
+        val s = "hello"
+        assertEquals("olleh", reverseString(s))
     }
 }
 
