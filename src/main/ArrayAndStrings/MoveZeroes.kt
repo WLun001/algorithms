@@ -12,7 +12,11 @@ fun moveZeroes(nums: IntArray): IntArray {
     val zeroIndex = ArrayList<Int>()
     val arr = nums.toMutableList()
     arr.sort()
-    arr.forEachIndexed { index, i -> if (i == 0){ zeroIndex.add(index) } }
+    arr.forEachIndexed { index, i ->
+        if (i == 0) {
+            zeroIndex.add(index)
+        }
+    }
     for (i in zeroIndex) arr.remove(0)
     return arr.toIntArray()
 }
