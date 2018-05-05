@@ -1,5 +1,6 @@
 package test
 
+import ArrayAndStrings.moveZeroes
 import ArrayAndStrings.plusOne
 import main.ArrayAndStrings.*
 import org.junit.jupiter.api.Test
@@ -57,6 +58,14 @@ class TestArrayAndString {
         assertTrue(Arrays.equals(intArrayOf(1,2,4), plusOne(arr)))
         assertTrue(Arrays.equals(intArrayOf(1,4,0), plusOne(arr2)))
         assertTrue(Arrays.equals(intArrayOf(4,3,2,2), plusOne(arr3)))
+    }
+
+    @Test
+    fun testMoveZeroes() {
+        val arr = intArrayOf(0,1,0,3,12)
+        val arr2 = intArrayOf(1,20,0,200,0,1,20,2)
+        assertTrue(Arrays.equals(intArrayOf(1,3,12), moveZeroes(arr)))
+        assertTrue(Arrays.equals(intArrayOf(1,1,2,20,20,200), moveZeroes(arr2)))
     }
 }
 
