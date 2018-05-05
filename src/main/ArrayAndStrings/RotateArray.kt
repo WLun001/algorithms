@@ -22,11 +22,12 @@ Note:
 Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
 Could you do it in-place with O(1) extra space?*/
 
-fun main(args: Array<String>) {
-    val arr = intArrayOf(1,2,3,4,5,6,7)
-
-}
-
-fun rotate(nums: IntArray, k: Int): Unit {
-
+fun rotate(nums: IntArray, k: Int): IntArray {
+    val arr = nums.toMutableList()
+    for (i in 0 until k) {
+        val temp = arr.last()
+        arr.removeAt(arr.size - 1)
+        arr.add(0, temp)
+    }
+    return arr.toIntArray()
 }
