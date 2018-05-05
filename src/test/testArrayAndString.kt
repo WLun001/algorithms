@@ -1,5 +1,6 @@
 package test
 
+import ArrayAndStrings.plusOne
 import main.ArrayAndStrings.*
 import org.junit.jupiter.api.Test
 import java.util.*
@@ -46,6 +47,16 @@ class TestArrayAndString {
         val arr = intArrayOf(1, 2, 2, 1)
         val arr2 = intArrayOf(2,2,3)
         assertTrue(Arrays.equals(intArrayOf(2), intersect(arr, arr2)))
+    }
+
+    @Test
+    fun testPlusOne() {
+        val arr = intArrayOf(1,2,3)
+        val arr2 = intArrayOf(1,3,9)
+        val arr3 = intArrayOf(4,3,2,1)
+        assertTrue(Arrays.equals(intArrayOf(1,2,4), plusOne(arr)))
+        assertTrue(Arrays.equals(intArrayOf(1,4,0), plusOne(arr2)))
+        assertTrue(Arrays.equals(intArrayOf(4,3,2,2), plusOne(arr3)))
     }
 }
 
