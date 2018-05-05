@@ -1,9 +1,6 @@
 package test
 
-import main.ArrayAndStrings.containsDuplicate
-import main.ArrayAndStrings.removeDuplicates
-import main.ArrayAndStrings.rotate
-import main.ArrayAndStrings.singleNumber
+import main.ArrayAndStrings.*
 import org.junit.jupiter.api.Test
 import java.util.*
 import kotlin.test.assertEquals
@@ -42,6 +39,13 @@ class TestArrayAndString {
         val arr2 = intArrayOf(4,1,2,1,2)
         assertEquals(1, singleNumber(arr))
         assertEquals(4, singleNumber(arr2))
+    }
+
+    @Test
+    fun testIntersection() {
+        val arr = intArrayOf(1, 2, 2, 1)
+        val arr2 = intArrayOf(2,2,3)
+        assertTrue(Arrays.equals(intArrayOf(2), intersect(arr, arr2)))
     }
 }
 
