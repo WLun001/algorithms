@@ -1,9 +1,6 @@
 package test
 
-import ArrayAndStrings.moveZeroes
-import ArrayAndStrings.plusOne
-import ArrayAndStrings.reverseString
-import ArrayAndStrings.twoSum
+import ArrayAndStrings.*
 import main.ArrayAndStrings.*
 import org.junit.jupiter.api.Test
 import java.util.*
@@ -81,6 +78,14 @@ class TestArrayAndString {
     fun testReverseString() {
         val s = "hello"
         assertEquals("olleh", reverseString(s))
+    }
+
+    @Test
+    fun testReverseInt() {
+        assertEquals(-321, reverseInt(-123))
+        assertEquals(321, reverseInt(123))
+        assertEquals(21, reverseInt(120))
+
     }
 }
 
