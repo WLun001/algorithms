@@ -3,6 +3,7 @@ package test
 import main.ArrayAndStrings.containsDuplicate
 import main.ArrayAndStrings.removeDuplicates
 import main.ArrayAndStrings.rotate
+import main.ArrayAndStrings.singleNumber
 import org.junit.jupiter.api.Test
 import java.util.*
 import kotlin.test.assertEquals
@@ -33,7 +34,14 @@ class TestArrayAndString {
         assertEquals(true, containsDuplicate(arr))
         assertEquals(false, containsDuplicate(arr2))
         assertEquals(true, containsDuplicate(arr3))
+    }
 
+    @Test
+    fun testSingleNumber() {
+        val arr = intArrayOf(2,2,1)
+        val arr2 = intArrayOf(4,1,2,1,2)
+        assertEquals(1, singleNumber(arr))
+        assertEquals(4, singleNumber(arr2))
     }
 }
 
