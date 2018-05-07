@@ -108,5 +108,11 @@ class TestArrayAndString {
         assertTrue(isAnagram(s,t))
         assertFalse(isAnagram(s2,t2))
     }
+
+    @Test
+    fun testStrStr() {
+        assertEquals(2, strStr("hello", "ll"))
+        assertEquals(-1, strStr("aaaaaaa", "bba"))
+    }
 }
 
