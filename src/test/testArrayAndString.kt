@@ -2,7 +2,7 @@ package test
 
 import ArrayAndStrings.*
 import main.ArrayAndStrings.*
-import org.junit.jupiter.api.Test
+import org.junit.Test
 import java.util.*
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -86,6 +86,16 @@ class TestArrayAndString {
         assertEquals(321, reverseInt(123))
         assertEquals(21, reverseInt(120))
 
+    }
+
+    @Test
+    fun testFirstUniqueChar() {
+        val s = "leetcode"
+        val s2 = "loveleetcode"
+        val s3 = "hhhellllo"
+        assertEquals(0, firstUniqueChar(s))
+        assertEquals(2, firstUniqueChar(s2))
+        assertEquals(3, firstUniqueChar(s3))
     }
 }
 
