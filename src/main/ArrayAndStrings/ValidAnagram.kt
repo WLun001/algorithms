@@ -1,0 +1,18 @@
+package ArrayAndStrings
+
+/*
+Given two strings s and t, write a function to determine if t is an anagram of s.
+
+For example,
+s = "anagram", t = "nagaram", return true.
+s = "rat", t = "car", return false.
+
+Note:
+You may assume the string contains only lowercase alphabets.
+
+Follow up:
+What if the inputs contain unicode characters? How would you adapt your solution to such case?*/
+
+fun isAnagram(s: String, t: String): Boolean {
+    return s.toLowerCase().toCharArray().sortedArray().contentEquals(t.toLowerCase().toCharArray().sortedArray())
+}

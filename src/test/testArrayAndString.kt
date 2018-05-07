@@ -5,6 +5,7 @@ import main.ArrayAndStrings.*
 import org.junit.Test
 import java.util.*
 import kotlin.test.assertEquals
+import kotlin.test.assertFalse
 import kotlin.test.assertTrue
 
 class TestArrayAndString {
@@ -96,6 +97,16 @@ class TestArrayAndString {
         assertEquals(0, firstUniqueChar(s))
         assertEquals(2, firstUniqueChar(s2))
         assertEquals(3, firstUniqueChar(s3))
+    }
+
+    @Test
+    fun testValidAnagram() {
+        val s = "anagram"
+        val t = "nagaram"
+        val s2 = "rat"
+        val t2 = "car"
+        assertTrue(isAnagram(s,t))
+        assertFalse(isAnagram(s2,t2))
     }
 }
 
