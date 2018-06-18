@@ -11,13 +11,13 @@ public class ComputeFibonacci {
 
         // Find and display the Fibonacci number
         System.out.println("The Fibonacci number at index " +
-                  index + " is " + fib(index));
+                index + " is " + fib(index));
     }
 
     public static long fib(long index) {
         if (index == 0) return 0; // Base case
         else if (index == 1) return 1; // Base case
-        else  return fib(index - 1) + fib(index - 2); // Reduction and recursive calls
+        else return fib(index - 1) + fib(index - 2); // Reduction and recursive calls
     }
 
 
