@@ -14,13 +14,15 @@ public class TowersOfHanoi {
         moveDisks(n, 'A', 'B', 'C');
     }
 
-    /** The method for finding the solution to move n disks
-     from fromTower to toTower with auxTower */
+    /**
+     * The method for finding the solution to move n disks
+     * from fromTower to toTower with auxTower
+     */
     public static void moveDisks(int n, char fromTower, char toTower, char auxTower) {
-        if (n == 1) System.out.println("move disk " + n + " from " + fromTower + " to " + toTower );
+        if (n == 1) System.out.println("move disk " + n + " from " + fromTower + " to " + toTower);
         else {
             moveDisks(n - 1, fromTower, auxTower, toTower);
-            System.out.println("move disk " + n + " from " + fromTower + " to " + toTower );
+            System.out.println("move disk " + n + " from " + fromTower + " to " + toTower);
             moveDisks(n - 1, auxTower, toTower, fromTower);
         }
     }

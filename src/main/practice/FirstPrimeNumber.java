@@ -24,6 +24,7 @@ public class FirstPrimeNumber {
 
     /**
      * get the array in reserve order
+     *
      * @param count nth of prime number
      * @return array of prime number in descending order
      */
@@ -35,9 +36,10 @@ public class FirstPrimeNumber {
 
     /**
      * check all prime number
-     * @param n prime number, start from 2
+     *
+     * @param n      prime number, start from 2
      * @param primes list of prime number
-     * @param count count of required nth prime number
+     * @param count  count of required nth prime number
      */
     private static void primeNumbers(int n, ArrayList<Integer> primes, int count) {
         if (n < 0) throw new IllegalArgumentException("Only positive integer is allowed");
@@ -49,8 +51,9 @@ public class FirstPrimeNumber {
 
     /**
      * check if the number if prime number
-     * @param x the number
-     * @param i sqrt of the number
+     *
+     * @param x      the number
+     * @param i      sqrt of the number
      * @param primes list of prime number
      * @return prime number
      */

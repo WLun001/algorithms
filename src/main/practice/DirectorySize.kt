@@ -18,8 +18,7 @@ fun getSize(file: File): Long {
         for (f in files) {
             fileSize += getSize(f)
         }
-    }
-    else fileSize += file.length()
+    } else fileSize += file.length()
     return fileSize
 }
 
