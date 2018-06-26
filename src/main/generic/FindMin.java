@@ -1,6 +1,8 @@
 package generic;
 
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Iterator;
 
 public class FindMin {
 
@@ -19,5 +21,14 @@ public class FindMin {
         list.add(new Rectangle(10, 2));
         list.add(new Rectangle(2, 5));
         System.out.println("Min = " + min(list));
+
+        Comparator<Rectangle> rectangleComparator = (o1, o2) -> Double.compare(o2.getPerimeter(), o1.getPerimeter());
+
+        list.sort(rectangleComparator);
+        //using iterator
+        Iterator<Rectangle> iterable = list.iterator();
+        while (iterable.hasNext()) System.out.println(iterable.next());
+        //using lambda
+        list.forEach(System.out::println);
     }
 }
