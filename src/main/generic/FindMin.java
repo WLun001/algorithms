@@ -28,7 +28,10 @@ public class FindMin {
         //using iterator
         Iterator<Rectangle> iterable = list.iterator();
         while (iterable.hasNext()) System.out.println(iterable.next());
+
         //using lambda
         list.forEach(System.out::println);
+
+        list.parallelStream().forEach(System.out::println);
     }
 }
