@@ -52,7 +52,7 @@ public class FirstPrimeNumber {
      * @param x the number
      * @param i sqrt of the number
      * @param primes list of prime number
-     * @return
+     * @return prime number
      */
     private static int primes(int x, double i, ArrayList<Integer> primes) {
         if (i == 1)
