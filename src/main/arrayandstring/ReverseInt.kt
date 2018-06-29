@@ -1,4 +1,4 @@
-package ArrayAndStrings
+package arrayandstring
 
 /*
 Given a 32-bit signed integer, reverseInt digits of an integer.

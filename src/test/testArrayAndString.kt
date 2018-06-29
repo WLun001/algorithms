@@ -1,6 +1,6 @@
 package test
 
-import ArrayAndStrings.*
+import arrayandstring.*
 import main.ArrayAndStrings.*
 import org.junit.Test
 import java.util.*

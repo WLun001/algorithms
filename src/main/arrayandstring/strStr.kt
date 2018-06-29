@@ -1,4 +1,4 @@
-package ArrayAndStrings
+package arrayandstring
 
 /*
 Implement strStr().
