@@ -3,3 +3,18 @@ Leaning data structure and algorithms from [LeetCode](https://leetcode.com), [In
 
 ### Should we learn data structure and algorithms ? 
 [Find out more](https://www.quora.com/Why-should-I-learn-data-structures-and-algorithms)
+
+## Directory Structure
+```
+algorithms/
+    |- src
+      |- main/             
+        |- arrayandstring/ - example solution of LeetCode question on Array and String topic
+        | - collection/ - example implementation/usage of collection from Java book
+        |- generic/ - example implementation/usage of generic from Java book
+        |- practice/ - self practice algorithms question
+        |- recursion/ - example implementation/usage of recursion from Java book
+      | - test/ - test class
+    |- .gitignore
+    |- README.md
+```
