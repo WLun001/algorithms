@@ -4,9 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class PerformanceTestIterator {
+    private static int SIZE = 10000;
     public static void main(String[] args) {
         ArrayList<Integer> obj = new ArrayList<>();
-        for (int i = 0; i < 10000000; i++) obj.add(i);
+        for (int i = 0; i < SIZE; i++) obj.add(i);
 
         long startTime = System.nanoTime();
         for (int i = 0; i < obj.size(); i++) {
@@ -48,7 +49,7 @@ public class PerformanceTestIterator {
 
         System.out.println("For loop: " + time0);
         System.out.println("For each: " + time1);
-        System.out.println("Iterable: " + time2);
+        System.out.println("Iterator: " + time2);
         System.out.println("Stream foreach: " + time3);
         System.out.println("Parallel stream Foreach: " + time4);
     }
