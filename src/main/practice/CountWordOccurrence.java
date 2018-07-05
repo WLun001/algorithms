@@ -21,8 +21,6 @@ public class CountWordOccurrence {
     }
 
     public static Map<String, Integer> wordsCountOccurrence(ArrayList<String> words) {
-
         return words.stream().collect(groupingBy(Function.identity(), summingInt(e -> 1)));
-
     }
 }
