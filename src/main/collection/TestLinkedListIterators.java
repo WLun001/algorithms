@@ -19,5 +19,11 @@ public class TestLinkedListIterators {
         for (int i : list) x = i;
         endTime = System.currentTimeMillis();
         System.out.println(endTime - startTime);
+
+        startTime = System.currentTimeMillis();
+        final int[] z = new int[1];
+        list.stream().map(y -> z[0] = y);
+        endTime = System.currentTimeMillis();
+        System.out.println(endTime - startTime);
     }
 }

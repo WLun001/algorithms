@@ -1,4 +1,4 @@
-package practice;
+package benchmark;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,43 +9,50 @@ public class PerformanceTestIterator {
         ArrayList<Integer> obj = new ArrayList<>();
         for (int i = 0; i < SIZE; i++) obj.add(i);
 
-        long startTime = System.nanoTime();
+        long startTime =  System.currentTimeMillis();
         for (int i = 0; i < obj.size(); i++) {
             int anObj = obj.get(i);
             if (anObj % 2 == 0)
                 System.out.println(anObj);
         }
-        long stopTime = System.nanoTime();
-        double time0 = (stopTime - startTime) / 1000000000.0;
+        long stopTime = System.currentTimeMillis();
+        double time0 = stopTime - startTime;
 
-        startTime = System.nanoTime();
+        obj = new ArrayList<>();
+        for (int i = 0; i < SIZE; i++) obj.add(i);
+        startTime = System.currentTimeMillis();
         for (int anObj : obj) {
             if (anObj % 2 == 0)
                 System.out.println(anObj);
         }
-        stopTime = System.nanoTime();
-        double time1 = (stopTime - startTime) / 1000000000.0;
+        stopTime = System.currentTimeMillis();
+        double time1 = stopTime - startTime;
 
-        startTime = System.nanoTime();
+        obj = new ArrayList<>();
+        for (int i = 0; i < SIZE; i++) obj.add(i);
+        startTime = System.currentTimeMillis();
         Iterator<Integer> iterable = obj.iterator();
         while (iterable.hasNext()) {
             int i = iterable.next();
             if (i % 2 == 0)
                 System.out.println(iterable.next());
         }
-        stopTime = System.nanoTime();
-        double time2 = (stopTime - startTime) / 1000000000.0;
+        stopTime = System.currentTimeMillis();
+        double time2 = stopTime - startTime;
 
-        //using lambda
-        startTime = System.nanoTime();
+        obj = new ArrayList<>();
+        for (int i = 0; i < SIZE; i++) obj.add(i);
+        startTime = System.currentTimeMillis();
         obj.stream().filter(i -> i % 2 == 0).forEach(System.out::println);
         stopTime = System.nanoTime();
-        double time3 = (stopTime - startTime) / 1000000000.0;
+        double time3 = stopTime - startTime;
 
-        startTime = System.nanoTime();
+        obj = new ArrayList<>();
+        for (int i = 0; i < SIZE; i++) obj.add(i);
+        startTime = System.currentTimeMillis();
         obj.parallelStream().filter(i -> i % 2 == 0).forEach(System.out::println);
         stopTime = System.nanoTime();
-        double time4 = (stopTime - startTime) / 1000000000.0;
+        double time4 = stopTime - startTime;
 
         System.out.println("For loop: " + time0);
         System.out.println("For each: " + time1);
