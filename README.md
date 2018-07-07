@@ -18,3 +18,6 @@ algorithms/
     |- .gitignore
     |- README.md
 ```
+
+## Benchmark
+[Compare collection performance](src/main/benchmark/result.md)
