@@ -20,4 +20,4 @@ algorithms/
 ```
 
 ## Benchmark
-[Compare collection performance](src/main/benchmark/result.md)
+[Compare collection performance](src/main/benchmark/benchmark.md)
