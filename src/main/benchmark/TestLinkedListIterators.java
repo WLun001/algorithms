@@ -1,4 +1,4 @@
-package collection;
+package benchmark;
 
 import java.util.LinkedList;
 
