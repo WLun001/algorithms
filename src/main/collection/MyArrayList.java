@@ -1,5 +1,7 @@
 package collection;
 
+import java.util.Iterator;
+
 public class MyArrayList<E> extends MyAbstractList<E> {
     public static final int INITIAL_CAPACITY = 16;
 
@@ -20,8 +22,11 @@ public class MyArrayList<E> extends MyAbstractList<E> {
             add(objects[i]); // Warning: don’t use super(objects)!
     }
 
+
+    /**
+     * Add a new element at the specified index
+     */
     @Override
-    /** Add a new element at the specified index */
     public void add(int index, E e) {
         ensureCapacity();
 
@@ -47,14 +52,18 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     /**
      * Clear the list
      */
+    @SuppressWarnings("unchecked")
     @Override
     public void clear() {
         data = (E[]) new Object[INITIAL_CAPACITY];
         size = 0;
     }
 
+
+    /**
+     * Return true if this list contains the element
+     */
     @Override
-    /** Return true if this list contains the element */
     public boolean contains(E e) {
         for (int i = 0; i < size; i++)
             if (e.equals(data[i])) return true;
@@ -144,6 +153,7 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     /**
      * Trims the capacity to current size
      */
+    @SuppressWarnings("unchecked")
     public void trimToSize() {
         if (size != data.length) {
             E[] newData = (E[]) (new Object[size]);
@@ -156,7 +166,7 @@ public class MyArrayList<E> extends MyAbstractList<E> {
      * Override iterator() defined in Iterable
      */
     @Override
-    public java.util.Iterator<E> iterator() {
+    public Iterator<E> iterator() {
         return new ArrayListIterator();
     }
 
