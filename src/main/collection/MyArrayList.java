@@ -22,14 +22,12 @@ public class MyArrayList<E> extends MyAbstractList<E> {
             add(objects[i]); // Warning: don’t use super(objects)!
     }
 
-
     /**
      * Add a new element at the specified index
      */
     @Override
     public void add(int index, E e) {
         ensureCapacity();
-
         // Move the elements to the right after the specified index
         for (int i = size - 1; i >= index; i--)
             data[i + 1] = data[i];
@@ -59,7 +57,6 @@ public class MyArrayList<E> extends MyAbstractList<E> {
         size = 0;
     }
 
-
     /**
      * Return true if this list contains the element
      */
@@ -67,7 +64,6 @@ public class MyArrayList<E> extends MyAbstractList<E> {
     public boolean contains(E e) {
         for (int i = 0; i < size; i++)
             if (e.equals(data[i])) return true;
-
         return false;
     }
 
@@ -146,7 +142,6 @@ public class MyArrayList<E> extends MyAbstractList<E> {
             result.append(data[i]);
             if (i < size - 1) result.append(", ");
         }
-
         return result.toString() + "]";
     }
 

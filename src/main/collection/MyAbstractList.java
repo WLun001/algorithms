@@ -25,6 +25,10 @@ public abstract class MyAbstractList<E> implements MyList<E> {
         add(size, e);
     }
 
+    /**
+     * Adds the elements in otherList to this list.
+     * Returns true if this list changed as a result of the call
+     */
     public boolean addAll(MyList<E> otherList) {
         boolean flag = false;
         for (int i = 0; i < otherList.size(); i++) {
@@ -33,7 +37,6 @@ public abstract class MyAbstractList<E> implements MyList<E> {
         }
         return flag;
     }
-
 
     /**
      * Return true if this list contains no elements
@@ -63,5 +66,34 @@ public abstract class MyAbstractList<E> implements MyList<E> {
             return true;
         } else
             return false;
+    }
+
+    //TODO: complete removeAll and RetainAll
+    /**
+     * Removes all the elements in otherList from this list.
+     * Returns true if this list changed as a result of the call
+     */
+    public boolean removeAll(MyList<E> otherList) {
+        boolean flag = false;
+        for (int i = 0; i < otherList.size(); i++) {
+            remove(otherList.get(i));
+            flag = true;
+        }
+        return flag;
+    }
+
+    /**
+     * Retains the elements in this list that are also in otherList.
+     * Returns true if this list changed as a result of the call
+     */
+    public boolean retainAll(MyList<E> otherList) {
+        boolean flag = false;
+        for (int i = 0; i < otherList.size(); i++) {
+            E item = otherList.get(i);
+            if (contains(item)) add(item);
+            else remove(item);
+            flag = true;
+        }
+        return flag;
     }
 }
