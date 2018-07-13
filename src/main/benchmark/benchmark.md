@@ -1,5 +1,5 @@
 ## Benchmark Result
-- benchmarking using while, for, stream foreach and stream foreach ordered
+- benchmarking using ```while```, ```for```, ```stream foreach``` and ```stream foreach ordered```
  - tested with java 9.0.4
  - Intel® Core™ i7-5500U CPU @ 2.40GHz × 4
  - Jetbrains IntelliJ IDEA Ultimate 2018.1.5
