@@ -4,7 +4,16 @@
  - Intel® Core™ i7-5500U CPU @ 2.40GHz × 4
  - Jetbrains IntelliJ IDEA Ultimate 2018.1.5
  - Ubuntu 18.04 LTS
-### Result
+### Result summary
+
+| Operation  | Best fit |
+| ------------- | ------------- |
+| Search  | LinkedHashSet **FOR/WHILE**: 10 milliseconds |
+| Remove | LinkedList **STREAM_FOREACH_ORDERED**: 0 milliseconds|
+
+
+
+### Result details
 #### HashSet
  - HashSet search WHILE: 32 milliseconds
  - HashSet search FOR: 17 milliseconds
