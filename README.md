@@ -10,7 +10,7 @@ algorithms/
     |- src
       |- main/             
         |- arrayandstring/ - example solution of LeetCode question on Array and String topic
-        | - collection/ - example implementation/usage of collection from Java book
+        |- collection/ - example implementation/usage of collection from Java book
         |- generic/ - example implementation/usage of generic from Java book
         |- practice/ - self practice algorithms question
         |- recursion/ - example implementation/usage of recursion from Java book
