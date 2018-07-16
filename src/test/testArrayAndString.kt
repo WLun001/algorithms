@@ -1,7 +1,6 @@
 package test
 
 import arrayandstring.*
-import main.ArrayAndStrings.*
 import org.junit.Test
 import java.util.*
 import kotlin.test.assertEquals
