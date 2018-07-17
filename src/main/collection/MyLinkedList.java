@@ -191,8 +191,7 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
      */
     @Override
     public boolean contains(E e) {
-        System.out.println("Implementation left as an exercise");
-        return true;
+        return indexOf(e) > 0;
     }
 
     /**
@@ -200,8 +199,10 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
      */
     @Override
     public E get(int index) {
-        System.out.println("Implementation left as an exercise");
-        return null;
+        Node<E> item = head;
+        for (int i = 0; i < index; i++)
+            item = item.next;
+        return item.element;
     }
 
     /**
@@ -210,8 +211,18 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
      */
     @Override
     public int indexOf(E e) {
-        System.out.println("Implementation left as an exercise");
-        return 0;
+        Node<E> item = head;
+        int index = 0;
+        for (int i = 0; i < this.size(); i++) {
+            if (item.element.equals(e)) {
+                index = i;
+                break;
+            } else {
+                item = item.next;
+                index = -1;
+            }
+        }
+        return index;
     }
 
     /**

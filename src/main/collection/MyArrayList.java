@@ -165,8 +165,7 @@ public class MyArrayList<E> extends MyAbstractList<E> {
         return new ArrayListIterator();
     }
 
-    private class ArrayListIterator
-            implements java.util.Iterator<E> {
+    private class ArrayListIterator implements Iterator<E> {
         private int current = 0; // Current index
 
         @Override
