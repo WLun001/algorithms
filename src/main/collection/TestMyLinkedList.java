@@ -13,11 +13,16 @@ public class TestMyLinkedList {
         list.remove(0);
         list.remove(2);
         list.remove(list.size() - 1);
+        list.add("Russia");
         System.out.println(list);
         System.out.println(list.contains("America"));
         System.out.println(list.contains("Americas"));
         System.out.println(list.indexOf("Americas"));
         System.out.println(list.indexOf("Russia"));
         System.out.println(list.get(3));
+        System.out.println(list.set(1, "Hello"));
+        System.out.println(list);
+        System.out.println(list.lastIndexOf("Russia"));
+
     }
 }

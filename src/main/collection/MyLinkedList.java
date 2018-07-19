@@ -231,8 +231,11 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
      */
     @Override
     public int lastIndexOf(E e) {
-        System.out.println("Implementation left as an exercise");
-        return 0;
+        int index = -1;
+        for (int i = 0; i < this.size(); i++) {
+            if (get(i).equals(e)) index = i;
+        }
+        return index;
     }
 
     /**
@@ -241,8 +244,8 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
      */
     @Override
     public E set(int index, E e) {
-        System.out.println("Implementation left as an exercise");
-        return null;
+        add(index, e);
+        return remove(index + 1);
     }
 
     /**
