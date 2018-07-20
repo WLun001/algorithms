@@ -212,15 +212,13 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
     @Override
     public int indexOf(E e) {
         Node<E> item = head;
-        int index = 0;
+        int index = -1;
         for (int i = 0; i < this.size(); i++) {
             if (item.element.equals(e)) {
                 index = i;
                 break;
-            } else {
-                item = item.next;
-                index = -1;
             }
+            item = item.next;
         }
         return index;
     }
