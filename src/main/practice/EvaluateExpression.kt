@@ -41,16 +41,16 @@ fun scanTokenIntoStacks(tokens: CharArray): Stacks {
     val operatorStack = Stack<Char>()
     for (token in tokens) {
         if (token == '+' || token == '-') {
-            while (!operatorStack.isEmpty() &&
-                    (operatorStack.peek() == '+' ||
-                            operatorStack.peek() == '-' ||
-                            operatorStack.peek() == '*' ||
-                            operatorStack.peek() == '/')) processAnOperator(operandStack, operatorStack)
+            while (!operatorStack.isEmpty()) {
+                if("+-*/".contains(operatorStack.peek()))
+                        processAnOperator(operandStack, operatorStack)
+            }
             operatorStack.push(token)
         } else if (token == '*' || token == '/') {
-            while (!operatorStack.isEmpty() &&
-                    (operatorStack.peek() == '*' || operatorStack.peek() == '/'))
-                processAnOperator(operandStack, operatorStack)
+            while (!operatorStack.isEmpty()) {
+                if (operatorStack.peek() == '*' || operatorStack.peek() == '/')
+                    processAnOperator(operandStack, operatorStack)
+            }
             operatorStack.push(token)
         } else if (token == '(') operatorStack.push(token)
         else if (token == ')') {
@@ -82,6 +82,11 @@ fun processAnOperator(operandStack: Stack<Int>, operatorStack: Stack<Char>) {
     val operator = operatorStack.pop()
     val operand1 = operandStack.pop()
     val operand2 = operandStack.pop()
+//    val x = {
+//        "+" : operand2 + operand1,
+//        "_": operand2 + operand1
+//    }
+//    operandStack.push(x[operator])
     when (operator) {
         '+' -> operandStack.push(operand2 + operand1)
         '-' -> operandStack.push(operand2 - operand1)
