@@ -41,16 +41,12 @@ fun scanTokenIntoStacks(tokens: CharArray): Stacks {
     val operatorStack = Stack<Char>()
     for (token in tokens) {
         if (token == '+' || token == '-') {
-            while (!operatorStack.isEmpty()) {
-                if("+-*/".contains(operatorStack.peek()))
-                        processAnOperator(operandStack, operatorStack)
-            }
+            while (!operatorStack.isEmpty() && ("+-*/".contains(operatorStack.peek())))
+                processAnOperator(operandStack, operatorStack)
             operatorStack.push(token)
         } else if (token == '*' || token == '/') {
-            while (!operatorStack.isEmpty()) {
-                if (operatorStack.peek() == '*' || operatorStack.peek() == '/')
-                    processAnOperator(operandStack, operatorStack)
-            }
+            while (!operatorStack.isEmpty() && (operatorStack.peek() == '*' || operatorStack.peek() == '/'))
+                processAnOperator(operandStack, operatorStack)
             operatorStack.push(token)
         } else if (token == '(') operatorStack.push(token)
         else if (token == ')') {
