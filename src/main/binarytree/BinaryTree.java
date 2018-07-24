@@ -243,7 +243,7 @@ public class BinaryTree<E extends Comparable<E>> extends AbstractTree<E> {
     /**
      * Obtain an iterator. Use inorder.
      */
-    public java.util.Iterator<E> iterator() {
+    public Iterator<E> iterator() {
         return new InorderIterator();
     }
 
