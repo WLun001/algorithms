@@ -278,9 +278,10 @@ public class MyLinkedList<E> extends MyAbstractList<E> {
             return e;
         }
 
+        //TODO:
         @Override
         public void remove() {
-            System.out.println("Implementation left as an exercise");
+            MyLinkedList.this.remove(indexOf(current.element));
         }
     }
 }
