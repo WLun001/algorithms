@@ -3,6 +3,9 @@ package practice.containerStorage;
 import java.util.HashMap;
 import java.util.Stack;
 
+/**
+ * Container storage regions are usually set up in a port where a crane is assigned to each region. Each region is a rectangular area with stacks of containers. It is assumed that there are at most 10 containers in one stack due to the height of a crane. In addition, each container is given a unique identity number and a description of the content.
+ */
 public class ContainerStorage {
     public static final int ROW = 10;
     public static final int COLUMN = 10;
