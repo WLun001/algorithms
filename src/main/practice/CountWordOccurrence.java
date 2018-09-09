@@ -9,7 +9,6 @@ import static java.util.stream.Collectors.summingInt;
 
 public class CountWordOccurrence {
     public static void main(String[] args) {
-
         ArrayList<String> wordsList = new ArrayList<>();
         wordsList.add("hello");
         wordsList.add("bye");
@@ -17,7 +16,6 @@ public class CountWordOccurrence {
         wordsList.add("ciao");
         wordsList.add("bye");
         System.out.println(wordsCountOccurrence(wordsList));
-
     }
 
     public static Map<String, Integer> wordsCountOccurrence(ArrayList<String> words) {
