@@ -10,10 +10,14 @@ algorithms/
     |- src
       |- main/             
         |- arrayandstring/ - example solution of LeetCode question on Array and String topic
+        | - benchmark/ - benchmarking 
+        | - binarytree/ - example implementation/usage of binary tree from Java book
         |- collection/ - example implementation/usage of collection from Java book
         |- generic/ - example implementation/usage of generic from Java book
+        |- graph/ - example implementation/usage of graph from Java book
         |- practice/ - self practice algorithms question
         |- recursion/ - example implementation/usage of recursion from Java book
+        |- sorting/ - example implementation/usage of sorting from Java book, some of them rewritten in Kotlin
       | - test/ - test class
     |- .gitignore
     |- README.md
