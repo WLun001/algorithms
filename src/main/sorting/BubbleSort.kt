@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
 }
 
 fun bubbleSort(arr: IntArray): IntArray {
-    val arrList = arr.toMutableList()
+    val arrList = arr.copyOf()
     val iterable = arrList.size
     var i = 1
     var needRepeat = true
@@ -22,5 +22,5 @@ fun bubbleSort(arr: IntArray): IntArray {
         }
         i++
     }
-    return arrList.toIntArray()
+    return arrList
 }
