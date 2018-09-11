@@ -1,8 +1,8 @@
 package practice;
 
-import java.util.ArrayList;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.summingInt;
@@ -16,9 +16,29 @@ public class CountWordOccurrence {
         wordsList.add("ciao");
         wordsList.add("bye");
         System.out.println(wordsCountOccurrence(wordsList));
+        System.out.println(findDuplicate(wordsList));
+        System.out.println(findDuplicateV2(wordsList));
     }
 
-    public static Map<String, Integer> wordsCountOccurrence(ArrayList<String> words) {
+    public static <T> Map<T, Integer> wordsCountOccurrence(ArrayList<T> words) {
         return words.stream().collect(groupingBy(Function.identity(), summingInt(e -> 1)));
+    }
+
+    public static <T> List<T> findDuplicate(Collection<T> c) {
+        return c.stream()
+                .distinct()
+                .filter(i -> Collections.frequency(c, i) > 1)
+                .collect(Collectors.toList());
+    }
+
+    public static List findDuplicateV2(Collection c) {
+        Set unique = new HashSet();
+        Set duplicate = new HashSet();
+        for (Object name : c) {
+            if (!unique.add(name)) duplicate.add(name);
+        }
+        ArrayList duplicateArr = new ArrayList();
+        duplicateArr.addAll(duplicate);
+        return duplicateArr;
     }
 }
