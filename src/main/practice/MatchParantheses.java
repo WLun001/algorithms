@@ -1,7 +1,5 @@
 package practice;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-
 import java.util.Stack;
 
 public class MatchParantheses {
