@@ -11,7 +11,7 @@ public class ComputeFibonacci {
 
         // Find and display the Fibonacci number
         System.out.println("The Fibonacci number at index " +
-                index + " is " + fib(index));
+                index + " is " + fibonacci(index));
     }
 
     public static long fib(long index) {
@@ -20,5 +20,25 @@ public class ComputeFibonacci {
         else return fib(index - 1) + fib(index - 2); // Reduction and recursive calls
     }
 
+    /**
+     * calculate fibonacci with dynamic programming approach
+     * @param n number to be calculate
+     * @return fibonacci
+     */
+    public static long fibonacci(long n) {
+        long f0 = 0;
+        long f1 = 1;
+        long f2 = 1;
 
+        if (n == 0) return f0;
+        else if (n == 1) return f1;
+        else if (n == 2) return  f2;
+
+        for (int i = 3; i < n; i++) {
+            f0 = f1;
+            f1 = f2;
+            f2 = f0 + f1;
+        }
+        return f2;
+    }
 }

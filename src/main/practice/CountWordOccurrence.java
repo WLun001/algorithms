@@ -17,7 +17,7 @@ public class CountWordOccurrence {
         wordsList.add("bye");
         System.out.println(wordsCountOccurrence(wordsList));
         System.out.println(findDuplicate(wordsList));
-        System.out.println(findDuplicateV2(wordsList));
+        System.out.println(wordsList.removeAll(findDuplicateV2(wordsList)));
     }
 
     public static <T> Map<T, Integer> wordsCountOccurrence(ArrayList<T> words) {

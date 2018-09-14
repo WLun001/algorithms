@@ -1,6 +1,6 @@
 package practice;
 
-public class Recursion {
+public class Numbers {
 
     public static void main(String[] args) {
         binaryPrint(19);
