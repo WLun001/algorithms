@@ -9,7 +9,8 @@ Leaning data structure and algorithms from [LeetCode](https://leetcode.com), [In
 algorithms/
     |- src
       |- main/             
-        |- leetcode.arrayandstring/ - example solution of LeetCode question on Array and String topic
+        |- leetcode/ - example solution of LeetCode question on Array and String topic
+        | - codility/ - example solution from Codility challanges
         | - benchmark/ - benchmarking 
         | - binarytree/ - example implementation/usage of binary tree from Java book
         |- collection/ - example implementation/usage of collection from Java book
