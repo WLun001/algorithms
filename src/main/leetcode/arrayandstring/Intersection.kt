@@ -1,4 +1,4 @@
-package arrayandstring
+package leetcode.arrayandstring
 
 //Given two arrays, write a function to compute their intersection.
 //

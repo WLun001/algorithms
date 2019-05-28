@@ -1,4 +1,4 @@
-package arrayandstring
+package leetcode.arrayandstring
 
 /*
 Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
@@ -20,9 +20,9 @@ Explanation: The array represents the integer 4321.*/
 
 fun plusOne(digits: IntArray): IntArray {
     when {
-        digits[digits.lastIndex] != 9 -> digits[digits.lastIndex] = digits[digits.lastIndex] + 1
+        digits[digits.lastIndex] != 9 -> digits[digits.lastIndex]++
         else -> {
-            digits[digits.lastIndex - 1] = digits[digits.lastIndex - 1] + 1
+            digits[digits.lastIndex - 1]++
             digits[digits.lastIndex] = 0
         }
     }

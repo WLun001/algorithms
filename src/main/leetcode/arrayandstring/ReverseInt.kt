@@ -1,4 +1,4 @@
-package arrayandstring
+package leetcode.arrayandstring
 
 /*
 Given a 32-bit signed integer, reverseInt digits of an integer.

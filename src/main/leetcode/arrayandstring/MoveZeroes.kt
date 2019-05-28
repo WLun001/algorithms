@@ -1,4 +1,4 @@
-package arrayandstring
+package leetcode.arrayandstring
 
 //Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 //
@@ -17,6 +17,10 @@ fun moveZeroes(nums: IntArray): IntArray {
             zeroIndex.add(index)
         }
     }
-    for (i in zeroIndex) arr.remove(0)
+    for (i in zeroIndex) {
+        val zero = arr[0]
+        arr.remove(0)
+        arr.add(zero)
+    }
     return arr.toIntArray()
 }

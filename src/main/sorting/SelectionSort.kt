@@ -6,7 +6,7 @@ fun main(args: Array<String>) {
 }
 
 fun selectionSort(arr: IntArray): IntArray {
-    val arrList = arr.toMutableList()
+    val arrList = arr.copyOf()
     for (i in 0 until arrList.size) {
         var currentMin = arrList[i]
         var currentMinIndex = i
@@ -21,5 +21,5 @@ fun selectionSort(arr: IntArray): IntArray {
             arrList[i] = currentMin
         }
     }
-    return arrList.toIntArray()
+    return arrList
 }

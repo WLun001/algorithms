@@ -1,9 +1,10 @@
 package practice;
 
-public class Recursion {
+public class Numbers {
 
     public static void main(String[] args) {
         binaryPrint(19);
+        System.out.println(parseBinary("10011"));
     }
 
     public static void printNumberDes(int n) {
@@ -38,10 +39,13 @@ public class Recursion {
     }
 
     public static void binaryPrint(int x) {
-        if (x == 0) System.out.println();
-        else {
-            System.out.println(x % 2 + "");
+        if (x != 0) {
             binaryPrint(x / 2);
+            System.out.print(x % 2 + "");
         }
+    }
+
+    public static int parseBinary(String binaryStr) {
+        return Integer.parseInt(binaryStr, 2);
     }
 }

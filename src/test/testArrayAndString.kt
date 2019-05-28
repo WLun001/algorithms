@@ -1,6 +1,6 @@
 package test
 
-import arrayandstring.*
+import leetcode.arrayandstring.*
 import org.junit.Test
 import java.util.*
 import kotlin.test.assertEquals
@@ -63,8 +63,8 @@ class TestArrayAndString {
     fun testMoveZeroes() {
         val arr = intArrayOf(0, 1, 0, 3, 12)
         val arr2 = intArrayOf(1, 20, 0, 200, 0, 1, 20, 2)
-        assertTrue(Arrays.equals(intArrayOf(1, 3, 12), moveZeroes(arr)))
-        assertTrue(Arrays.equals(intArrayOf(1, 1, 2, 20, 20, 200), moveZeroes(arr2)))
+        assertTrue(Arrays.equals(intArrayOf(1, 3, 12, 0, 0), moveZeroes(arr)))
+        assertTrue(Arrays.equals(intArrayOf(1, 1, 2, 20, 20, 200, 0, 0), moveZeroes(arr2)))
     }
 
     @Test

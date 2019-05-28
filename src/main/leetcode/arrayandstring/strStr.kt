@@ -1,4 +1,4 @@
-package arrayandstring
+package leetcode.arrayandstring
 
 /*
 Implement strStr().

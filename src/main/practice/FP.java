@@ -4,7 +4,7 @@ import java.util.function.Function;
 
 public class FP {
     public static void main(String[] args) {
-
+        System.out.print(invertTheNumber());
     }
 
     private static Integer invert(Integer value) {
