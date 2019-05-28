@@ -1,6 +1,5 @@
 package collection;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -34,7 +33,7 @@ public class SortedPoint {
         }
 
         @Override
-        public int compareTo(@NotNull Point p2) {
+        public int compareTo(Point p2) {
             if (this.x < p2.x) return -1;
             else if (this.x > p2.x) return 1;
             else if (this.y < p2.y) return -1;

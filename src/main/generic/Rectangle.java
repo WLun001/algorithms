@@ -1,6 +1,5 @@
 package generic;
 
-import org.jetbrains.annotations.NotNull;
 
 public class Rectangle extends GeometricObject implements Comparable<Rectangle> {
     private double width;
@@ -65,7 +64,7 @@ public class Rectangle extends GeometricObject implements Comparable<Rectangle> 
     }
 
     @Override
-    public int compareTo(@NotNull Rectangle o) {
+    public int compareTo(Rectangle o) {
         return Double.compare(this.getArea(), o.getArea());
     }
 }

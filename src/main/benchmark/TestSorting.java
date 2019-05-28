@@ -1,8 +1,12 @@
 package benchmark;
 
-import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.TreeSet;
 
 public class TestSorting {
 
@@ -93,7 +97,7 @@ public class TestSorting {
         }
 
         @Override
-        public int compareTo(@NotNull Box o) {
+        public int compareTo(Box o) {
             return Double.compare(o.getName(), this.getName());
         }
     }
